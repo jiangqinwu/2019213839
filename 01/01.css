@@ -1,0 +1,161 @@
+body{
+    display: grid;
+    width: 1300px;
+    margin: 0 auto;
+    /*grid-template-columns: repeat(4,auto);*/
+    grid-template-areas: 
+        "my-header my-header"
+        "my-button my-button"
+        "my-img my-intruduction"
+        "my-main   my-main"
+        "my-footer my-footer";
+    grid-template-columns: 1fr 1fr;
+}
+    .header{
+        grid-area: my-header; 
+        text-align: center;
+        background-color: #f9d998;      
+    }
+    /*设置链接的字体，去除下划线，并改变字体颜色同时改变鼠标点击时触发的颜色*/ 
+    a:visited {color: #a77d3f} 
+    a:active {color: #000000} 
+    a:hover {color: #ff0015}
+    a{
+        text-decoration: none
+    }
+    /*设置按钮grid*/
+     /* button styles */
+    .button{
+        grid-area: my-button;
+        text-align: center;
+        background-color: darkorange;
+    }
+   
+    .button, footer {
+        font-family: verdana, sans-serif;
+        background-color: #783F27;
+    }
+    /*设置链接的字体颜色和变化颜色*/
+    .button ul li a:link, .button ul li a:visited {
+        color: #F9AB33;
+    }*
+    .button ul li a:focus, .button ul li a:hover, .button ul li a:active {
+        color: #fff;
+    }
+    .button ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex; /*Flexible Box 模型*/
+        flex-wrap: nowrap;  /* warp:flex 元素 被打断到多个行中,nowarp:flex 的元素被摆放到到一行*/
+    }
+    .button ul li {
+        /*设置字体*/
+        font-size: .8em;   /*指定字体大小*/
+        text-transform: uppercase; /*CSS属性指定如何将元素的文本大写。这个关键字强制所有字符被转换为大写。*/
+        
+        letter-spacing: .2em;
+        /*flex: 1 1 50%;*/
+    }
+    .button ul li a { 	
+        display: block; 
+        width: 80px;	
+        border: 1px solid; 
+        padding: .5em 1em; 	
+        border-radius: .5em; 
+        margin: .25em; 
+        } 	
+    /*主体*/
+    
+    .img1{   /*将img设置为flex布局*/
+        display: flex;
+        grid-area: my-img;
+        height: 300px;
+        /*将其中的图片据居中处理*/
+        align-items: center;
+        justify-content: center;
+        background-color: #f6f3ed;
+    }
+    .img1 img{
+        /*设置宽度并将图片变成圆角*/
+        width: 50%;
+        height: 260px;
+        border-radius: 10px;    
+    } 
+    /*介绍*/
+    .intru{
+        display: grid; 
+        grid-area: my-intruduction;
+        text-align:left;
+        background-color: #f6f3ed;
+    }
+    .name{
+        display: flex;
+        font-size: 40px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left
+    }
+    .infor{
+        font-size: 20px;
+    }
+    /*电影介绍*/
+    .main{
+        display: grid;
+        grid-area: my-main;
+        grid-row-gap: 10px;
+        grid-template-areas:
+        "title" 
+        "item-root"; 
+        /* background-color:blanchedalmond; */  
+    }
+    .alltitle{
+        grid-area:title;
+        font-size: 30px;
+        background-color: #f9d998;
+    }
+    .item-root{
+        display: grid;
+        /* grid-area :item-root; */
+        grid-template-areas: 
+        "cover none title"
+        "cover none meta_abstract";
+        grid-template-rows: 1fr 2fr ;
+        grid-template-columns: 200px 100px auto;
+        background-color: #f6f3ed;
+    }
+    .cover-link{
+        grid-area: cover;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .cover{
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;   
+    }
+    .title{
+        display: flex;
+        grid-area:title;
+        font-size: 30px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left
+    }
+    .meta_abstract{
+        grid-area: meta_abstract;
+    }
+    /*回到顶部*/
+    .footer{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: my-footer;
+        background-color: #783F27;
+    }
+    
