@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>江亲武的课表</title>
+    <script  type="text/javascript" src="02.js"></script>
+    <script type="text/javascript" src="D:/githubcode/2019213839/02/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+        });
+    </script>
+
+    <link rel="stylesheet" href="02.css">
+</head>
+<body>
+    <div class="header">江亲武的课表</div>
+    <div style="text-align:center; " class="textId">
+        当前为第几周：<input type="text" name="week" id="textId">    
+        <input type="button" name="button" value="生成课表" onclick="createTableByData()">  
+    </div>
+    <div id="class_schedule" class="class_table">
+        <script>createTable("class_schedule");</script>
+    </div>
+    <div class="introduction"></div>
+</body>
