@@ -1,4 +1,4 @@
-
+//使用js动态生成代码生成课表
 var data = [
     {
         name:"Windows程序设计",
